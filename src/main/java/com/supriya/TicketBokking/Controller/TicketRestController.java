@@ -18,7 +18,7 @@ public class TicketRestController {
         Ticket ticket = ticketService.bookTicket(passenger);
         return new ResponseEntity<>(ticket, HttpStatus.CREATED);
     }
-    @GetMapping("/ticketId/{ticketId}")
+    @GetMapping("/ticketid/{ticketId}")
     public ResponseEntity<Ticket> getTicket(@PathVariable Integer ticketId) {
         Ticket ticket = ticketService.getTicket(ticketId);
         return ResponseEntity.ok(ticket);
