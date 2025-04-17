@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 public class TicketRestController {
 
     private TicketService ticketService;
-    @PostMapping("/bookTicket")
+    @PostMapping("/bookticket")
     public ResponseEntity<Ticket> bookTicket(@RequestBody Passenger passenger) {
 
         Ticket ticket = ticketService.bookTicket(passenger);
