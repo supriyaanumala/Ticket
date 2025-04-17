@@ -1,0 +1,23 @@
+debug: false
+server:
+  port: 8080 # Specify your desired server port
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres # Replace with your DB URL
+    username: postgres                             # Replace with your DB username
+    password: 1234                                 # Replace with your DB password
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 10
+      connection-timeout: 30000 # Timeout in milliseconds
+      idle-timeout: 600000      # Timeout in milliseconds
+      max-lifetime: 1800000     # Lifetime in milliseconds
+  jpa:
+    hibernate:
+      ddl-auto: update # Options: none, validate, update, create, create-drop
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    open-in-view: false
